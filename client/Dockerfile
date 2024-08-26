@@ -19,5 +19,5 @@ RUN npm run build
 # Expose the port that the application will use
 EXPOSE 3000
 
-# Run the command to start the application
-CMD ["npm", "start"]
+# Serve the built files
+CMD ["npm", "serve"]
