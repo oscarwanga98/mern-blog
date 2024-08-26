@@ -10,7 +10,7 @@ const cookieParser = require("cookie-parser");
 const multer = require("multer");
 const uploadMiddleware = multer({ dest: "uploads/" });
 const fs = require("fs");
-
+const dotenv=require('dotenv')
 
 const salt = bcrypt.genSaltSync(10);
 const secret = "asdfe45we45w345wegw345werjktjwertkj";
@@ -23,7 +23,9 @@ app.use("/uploads", express.static(__dirname + "/uploads"));
 // mongoose.connect(
 //   "mongodb+srv://oscarwanga:123456789x@blogow.uhesz.mongodb.net/?retryWrites=true&w=majority&appName=blogow"
 // );
-const connectionString =  "mongodb+srv://oscarwanga:123456789x@blogow.uhesz.mongodb.net/?retryWrites=true&w=majority&appName=blogow";
+// Connect to MongoDB using environment variable
+const connectionString =
+  "mongodb+srv://oscarwanga:123456789x@blogow.uhesz.mongodb.net/?retryWrites=true&w=majority&appName=blogow";
 
 mongoose
   .connect(connectionString, {
