@@ -26,8 +26,8 @@ export default function Header() {
 
   return (
     <header>
-      <Link to="/" className="logo">MyBlog</Link>
-      <nav>
+      <Link to="/" className="logo">Digital info</Link>
+      {/* <nav>
         {username && (
           <>
             <Link to="/create">Create new post</Link>
@@ -40,7 +40,7 @@ export default function Header() {
             <Link to="/register">Register</Link>
           </>
         )}
-      </nav>
+      </nav> */}
     </header>
   );
 }
