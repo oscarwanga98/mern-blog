@@ -13,14 +13,8 @@ RUN npm install
 # Copy the rest of the application code
 COPY . .
 
-# Build the application
-RUN npm run build
-
-# Move into the build directory
-WORKDIR /app/build
-
 # Expose the port that the application will use
-EXPOSE 3000
+EXPOSE 4000
 
 # Run the command to start the application
-CMD ["npx", "serve", "-s", "."]
+CMD ["node", "api/index.js"]
