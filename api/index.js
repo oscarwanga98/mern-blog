@@ -36,6 +36,7 @@ mongoose
   })
   .then(() => console.log("MongoDB connected successfully!"))
   .catch((err) => console.error("MongoDB connection failed:", err));
+  
 
 app.post("/register", async (req, res) => {
   const { username, password } = req.body;

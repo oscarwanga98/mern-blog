@@ -20,7 +20,7 @@ RUN npm run build
 WORKDIR /app/build
 
 # Expose the port that the application will use
-EXPOSE 3000
+EXPOSE 3000 4000 80
 
 # Run the command to start the application
 CMD ["npx", "serve", "-s", "."]
