@@ -11,8 +11,8 @@ const multer = require("multer");
 const uploadMiddleware = multer({ dest: "uploads/" });
 const fs = require("fs");
 const dotenv = require("dotenv");
-const secret = process.env.SECRET_KEY;
-// const secret = "asdfe45we45w345wegw345werjktjwertkj";
+// const secret = process.env.SECRET_KEY;
+const secret = "asdfe45we45w345wegw345werjktjwertkj";
 
 const salt = bcrypt.genSaltSync(10);
 
