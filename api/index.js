@@ -10,11 +10,14 @@ const cookieParser = require("cookie-parser");
 const multer = require("multer");
 const uploadMiddleware = multer({ dest: "uploads/" });
 const fs = require("fs");
+const dotenv = require("dotenv");
+const secret = process.env.SECRET_KEY;
+// const secret = "asdfe45we45w345wegw345werjktjwertkj";
 
 const salt = bcrypt.genSaltSync(10);
-const secret = "asdfe45we45w345wegw345werjktjwertkj";
 
-app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+
+app.use(cors({ credentials: true, origin: process.env.CLIENT_ORIGIN }));
 app.use(express.json());
 app.use(cookieParser());
 app.use("/uploads", express.static(__dirname + "/uploads"));
@@ -22,7 +25,9 @@ app.use("/uploads", express.static(__dirname + "/uploads"));
 // mongoose.connect(
 //   "mongodb+srv://oscarwanga:123456789x@blogow.uhesz.mongodb.net/?retryWrites=true&w=majority&appName=blogow"
 // );
-const connectionString =  "mongodb+srv://oscarwanga:123456789x@blogow.uhesz.mongodb.net/?retryWrites=true&w=majority&appName=blogow";
+// Connect to MongoDB using environment variable
+const connectionString =
+  "mongodb+srv://oscarwanga:123456789x@blogow.uhesz.mongodb.net/?retryWrites=true&w=majority&appName=blogow";
 
 mongoose
   .connect(connectionString, {
