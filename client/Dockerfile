@@ -23,4 +23,4 @@ WORKDIR /app/build
 EXPOSE 3000 4000 80
 
 # Run the command to start the application
-CMD ["npm", "serve", "-s", "."]
+CMD ["npx", "serve", "-s", "."]
