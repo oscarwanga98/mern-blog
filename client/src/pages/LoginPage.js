@@ -3,7 +3,7 @@ import { Navigate } from "react-router-dom";
 import { UserContext } from "../UserContext";
 
 export default function LoginPage() {
-  const apiUrl = process.env.REACT_APP_API_URL;
+  const apiUrl = "https://mern-blog-backendapi.onrender.com";
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [redirect, setRedirect] = useState(false);

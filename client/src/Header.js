@@ -4,7 +4,7 @@ import {UserContext} from "./UserContext";
 
 
 export default function Header() {
-  const apiUrl = process.env.REACT_APP_API_URL;
+  const apiUrl = "https://mern-blog-backendapi.onrender.com";
   const {setUserInfo,userInfo} = useContext(UserContext);
   useEffect(() => {
     fetch(`${apiUrl}/profile`, {

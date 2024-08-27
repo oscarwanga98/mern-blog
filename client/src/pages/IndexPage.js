@@ -2,7 +2,7 @@ import Post from "../Post";
 import {useEffect, useState} from "react";
 
 export default function IndexPage() {
-  const apiUrl = process.env.REACT_APP_API_URL;
+  const apiUrl = "https://mern-blog-backendapi.onrender.com";
   const [posts,setPosts] = useState([]);
   useEffect(() => {
     fetch(`${apiUrl}/post`).then((response) => {

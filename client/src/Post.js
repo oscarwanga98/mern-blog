@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 
 export default function Post({_id,title,summary,cover,content,createdAt,author}) {
-  const apiUrl = process.env.REACT_APP_API_URL;
+  const apiUrl = "https://mern-blog-backendapi.onrender.com";
 
   return (
     <div className="post">

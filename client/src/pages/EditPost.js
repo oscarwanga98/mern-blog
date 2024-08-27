@@ -4,7 +4,7 @@ import Editor from "../Editor";
 
 
 export default function EditPost() {
-  const apiUrl = process.env.REACT_APP_API_URL;
+  const apiUrl = "https://mern-blog-backendapi.onrender.com";
   const {id} = useParams();
   const [title,setTitle] = useState('');
   const [summary,setSummary] = useState('');

@@ -2,7 +2,7 @@ import {useState} from "react";
 
 
 export default function RegisterPage() {
-  const apiUrl = process.env.REACT_APP_API_URL;
+  const apiUrl = "https://mern-blog-backendapi.onrender.com";
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   async function register(ev) {
