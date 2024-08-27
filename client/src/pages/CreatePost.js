@@ -1,11 +1,12 @@
-// import ReactQuill from "react-quill";
+import ReactQuill from "react-quill";
 import 'react-quill/dist/quill.snow.css';
 import {useState} from "react";
 import {Navigate} from "react-router-dom";
 import Editor from "../Editor";
-const apiUrl = process.env.REACT_APP_API_URL;
+
 
 export default function CreatePost() {
+  const apiUrl = process.env.REACT_APP_API_URL;
   const [title,setTitle] = useState('');
   const [summary,setSummary] = useState('');
   const [content,setContent] = useState('');

@@ -1,9 +1,10 @@
 import {useEffect, useState} from "react";
 import {Navigate, useParams} from "react-router-dom";
 import Editor from "../Editor";
-const apiUrl = process.env.REACT_APP_API_URL;
+
 
 export default function EditPost() {
+  const apiUrl = process.env.REACT_APP_API_URL;
   const {id} = useParams();
   const [title,setTitle] = useState('');
   const [summary,setSummary] = useState('');

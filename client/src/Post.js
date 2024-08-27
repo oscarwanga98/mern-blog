@@ -1,8 +1,9 @@
 import {formatISO9075} from "date-fns";
 import {Link} from "react-router-dom";
-const apiUrl = process.env.REACT_APP_API_URL;
+
 
 export default function Post({_id,title,summary,cover,content,createdAt,author}) {
+  const apiUrl = process.env.REACT_APP_API_URL;
 
   return (
     <div className="post">

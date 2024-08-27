@@ -1,9 +1,10 @@
 import {Link} from "react-router-dom";
 import {useContext, useEffect, useState} from "react";
 import {UserContext} from "./UserContext";
-const apiUrl = process.env.REACT_APP_API_URL;
+
 
 export default function Header() {
+  const apiUrl = process.env.REACT_APP_API_URL;
   const {setUserInfo,userInfo} = useContext(UserContext);
   useEffect(() => {
     fetch(`${apiUrl}/profile`, {

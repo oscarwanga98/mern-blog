@@ -14,10 +14,14 @@ const dotenv = require("dotenv");
 // const secret = process.env.SECRET_KEY;
 const secret = "asdfe45we45w345wegw345werjktjwertkj";
 
+
 const salt = bcrypt.genSaltSync(10);
 
 
+// app.use(cors("*"));
 app.use(cors({ credentials: true, origin: process.env.CLIENT_ORIGIN }));
+
+
 app.use(express.json());
 app.use(cookieParser());
 app.use("/uploads", express.static(__dirname + "/uploads"));

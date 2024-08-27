@@ -1,7 +1,8 @@
 import {useState} from "react";
-const apiUrl = process.env.REACT_APP_API_URL;
+
 
 export default function RegisterPage() {
+  const apiUrl = process.env.REACT_APP_API_URL;
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   async function register(ev) {

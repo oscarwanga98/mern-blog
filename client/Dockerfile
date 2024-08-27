@@ -17,10 +17,10 @@ COPY . .
 RUN npm run build
 
 # Move into the build directory
-WORKDIR /app/build
+WORKDIR /app
 
 # Expose the port that the application will use
 EXPOSE 3000 4000 80
 
 # Run the command to start the application
-CMD ["npx", "serve", "-s", "."]
+CMD ["npm", "start"]
